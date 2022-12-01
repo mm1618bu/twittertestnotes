@@ -1,0 +1,81 @@
+body{
+    background-color: #cc0000;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.loginContainer{
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    border: 1px solid #dedede;
+    background-color: #ffffff;
+    text-align: center;
+    --webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+    --moz-box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"]{
+    margin-bottom: 20px;
+    padding: 5px 10px;
+    border-radius: 2px;
+    border: 1px solid #dedede;
+    background-color: #f2f2f2;
+}
+
+input[type="submit"]{
+    background-color: #CC332D;
+    color: #ffffff;
+    border: none;
+    border-radius: 2px;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.loginContainer > .schoolTitle{
+    color: #cc0000;
+}
+
+
+
+.schoolTitle::first-letter{
+    font-weight: bolder;
+    color: #f02c2c;
+}
+
+.bio::first-line{
+    text-decoration: underline;
+}
+
+.bio > h1 {
+    text-align: center;
+    padding: 20px;
+}
+
+.benefit1 + #a{
+    background-color: green
+}
+
+.benefit2 + #b{
+    background-color: orange
+}
+
+.benefit3 + #c{
+    background-color: blue
+}
+
+.benefit4 + #d{
+    background-color: white
+}

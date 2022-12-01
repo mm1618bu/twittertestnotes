@@ -1,0 +1,350 @@
+:root{
+    --blue: #1fa2f1;
+    --buttonHoverBg: #d4edff;
+    --lightGrey: rgb(230,236,240);
+    --spacing: 15px;
+    --blueLight: #f87f7f;
+    --greyText: rgb(101,119,134);
+    --greyButtonText: rgba(0,0,0,0.34);
+    --red: rgb(226,34,94);
+    --redBackground: rgba(226,34,94,.1);
+    --green: rgb(23,191,99);
+    --greenBackground: rgba(23,191,99,.1);
+    --schoolRed: #CC332D;
+    --schoolRedHover: rgba();
+
+}
+
+*{
+    outline: none !important;
+}
+a{
+    color: inherit;
+}
+
+a:hover{
+    color: inherit;
+    text-decoration: none;
+}
+
+h1{
+    font-size: 19px;
+    font-weight: 800;
+    margin: 0;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 100%;
+}
+
+nav a{
+    display: flex;
+    padding: 10px;
+    font-size: 30px;
+    width: 55px;
+    height: 55px;
+    align-items: center;
+    justify-content: center;
+    color: #212529;
+}
+
+nav a.blue{
+    color: var(--schoolRed);
+}
+
+nav a:hover{
+    background-color: var(--schoolRed);
+    color: var(--lightGrey);
+    border-radius: 50%;
+}
+
+.wrapper > .row {
+    margin: 0;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    color: var(--greyButtonText);
+    padding-left: 16px;
+    min-height: 36px;
+    padding-right: 16px;
+    border-radius: 9999px;
+}
+
+button i, button span{
+    pointer-events: none;
+}
+
+.mainSectionContainer{
+    padding: 0;
+    border-left: 1px solid var(--lightGrey);
+    border-right: 1px solid var(--lightGrey);
+    display: flex;
+    flex-direction: column;
+}
+
+.titleContainer{
+    height: 53px;
+    padding: 0 var(--spacing);
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--lightGrey);
+    flex-shrink: 0;
+
+}
+
+.titleContainer h1 {
+    flex: 1;
+}
+
+.postFormContainer{
+    display: flex;
+    padding: var(--spacing);
+    border-bottom: 10px solid rgb(230,236,240);
+    flex-shrink: 0;
+}
+
+.modal .postFormContainer{
+    border: none;
+    padding: 0;
+    padding-top: var(--spacing);
+}
+
+.modal .post{
+    padding: 0 0 var(--spacing) 0;
+
+}
+
+.replyFlag{
+    margin-bottom: 5px;
+}
+
+.replyFlag a{
+    color: var(--schoolRed)
+}
+
+.userImageContainer{
+    width: 50px;
+    height: 50px;
+}
+
+.userImageContainer img{
+    width: 100%;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+
+.textareaContainer{
+    flex: 1;
+    padding-left: var(--spacing);
+}
+
+.textareaContainer textarea{
+    width: 100%;
+    border: none;
+    resize: none;
+    font-size: 19px;
+};
+
+#submitPostButton{
+    background-color: var(--blue);
+    color: #ffffff;
+    border: none;
+    border-radius: 40px;
+    padding: 7px 15px;
+}
+
+#submitPostButton:disabled{
+    background-color: var(--blueLight);
+    border-radius: 40px;
+}
+
+.post{
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing);
+    cursor: pointer;
+    border-bottom: 1px solid var(--lightGrey);
+    flex-shrink: 0;
+}
+
+.mainContentContainer{
+    flex: 1;
+    display: flex;
+}
+
+.postContentContainer{
+    padding-left: var(--spacing);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.username,.date{
+    color: var(--greyText);
+}
+
+.displayName{
+    font-weight: bold;
+}
+
+.postFooter{
+    display: flex;
+    align-items: center;
+}
+
+.postFooter .postButtonContainer{
+    flex: 1;
+    display: flex;
+}
+
+.postFooter .postButtonContainer button{
+    padding: 0 5px;
+}
+
+.header a:hover {
+    text-decoration: underline;
+}
+
+.header a,
+.header span{
+    padding-right: 5px;
+}
+
+.postButtonContainer button:hover{
+    background-color: #d4edff;
+    color: var(--blue);
+    border-radius: 50%;
+}
+
+.postButtonContainer.red button.active{
+    color: var(--red);
+}
+
+.postButtonContainer.red button:hover{
+    color: var(--red);
+    background-color: var(--redBackground);
+}
+
+.postButtonContainer.green button.active{
+    color: var(--green);
+}
+
+.postButtonContainer.green button:hover{
+    color: var(--green);
+    background-color: var(--greenBackground);
+}
+
+.postActionContainer{
+    padding-left: 35px;
+    font-size: 13px;
+    color: var(--greyText);
+}
+
+.post.largeFont .postBody, .post.largeFont .postFooter{
+    font-size: 23px;
+}
+
+.postContentContainer .header{
+    display: flex;
+}
+
+.postContentContainer .header .date{
+    flex: 1;
+}
+
+.profileHeaderContainer .coverPhotoContainer{
+    height: 180px;
+    background-color: var(--schoolRed);
+    position: relative;
+}
+
+.profileHeaderContainer .userImageContainer{
+    height: 132px;
+    width: 132px;
+    margin-left: var(--spacing);
+    position: absolute;
+    bottom: -66px;
+}
+
+.profileHeaderContainer .userImageContainer img{
+    border: 4px solid #ffffff;
+}
+
+.profileHeaderContainer .profileButtonsContainer{
+    text-align: right;
+    padding: var(--spacing);
+    min-height: 66px;
+}
+
+.profileButton, .followButton{
+    border: 1px solid var(--schoolRed);
+    color: var(--schoolRed);
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 60px;
+    display: inline-block;
+    margin-left: var(--spacing);
+}
+
+.profileButton:hover, .followButton:hover{
+    background-color: var(--schoolRedHover);
+}
+
+.followButton.following{
+    background-color: var(--schoolRed);
+}
+
+.profileHeaderContainer .userDetailContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 0 var(--spacing);
+}
+
+.followersContainer .value{
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.followersContainer span:not(.value){
+    color: var(--greyText);
+}
+
+.followersContainer a{
+    margin-right: 15px;
+}
+
+.followersContainer a:hover{
+    border-bottom: 1px solid black;
+}
+
+.tabsContainer{
+    display: flex;
+    border-bottom: 1px solid var(--lightGrey);
+    flex-shrink: 0;
+}
+
+.tab{
+    flex: 1;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--greyText);
+    font-weight: bold;
+}
+
+.tab.active{
+    color: var(--schoolRed);
+    border-bottom: 2px solid  var(--schoolRed);
+}
+
+.tab:hover{
+    color: var(--schoolRed);
+    background-color: var(--schoolRedHover);
+
+}
