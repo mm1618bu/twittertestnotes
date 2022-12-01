@@ -1,0 +1,14 @@
+extends layouts/login-layout.pug 
+
+block content
+    .loginContainer
+        h2.schoolTitle Boston University 
+        h1 Login
+        form(action="", method="post")
+
+            p.errorMessage #{errorMessage}
+
+            input#userNameTextBox(type="text", name="logUsername", placeholder="Username or Email",value=logUsername required="")
+            input#passwordTextBox(type="password", name="logPassword", placeholder="Password",required="")
+            input#submit(type="submit", value="Login")
+        a(href="/register") Need an Account? Register here.
